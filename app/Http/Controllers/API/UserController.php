@@ -36,6 +36,7 @@ class UserController extends Controller
             'no_ktp' => $fields['no_ktp'],
             'pekerjaan' => $fields['pekerjaan'],
             'pendidikan' => $fields['pendidikan'],
+            'role' => 'pemohon'
         ]);
 
         $token = $user->createToken('accountToken')->plainTextToken;
