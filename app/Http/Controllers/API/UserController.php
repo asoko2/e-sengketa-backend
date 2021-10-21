@@ -16,7 +16,6 @@ class UserController extends Controller
     {
         $fields = $request->validate([
             'username' => 'required|string|unique:users,username',
-            'email' => 'required|string|unique:users,email',
             'password' => 'required|string|confirmed',
             'name' => 'required|string',
             'alamat' => 'required|string',
@@ -28,7 +27,6 @@ class UserController extends Controller
 
         $user = User::create([
             'username' => $fields['username'],
-            'email' => $fields['email'],
             'password' => bcrypt($fields['password']),
             'name' => $fields['name'],
             'alamat' => $fields['alamat'],
