@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\API\UserController as UserAPI;
+use App\Http\Controllers\API\DataSengketaController as Daseng;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,6 @@ Route::post('/login', [UserAPI::class, 'login']);
 
 Route::group(['middleware' => ['auth:sanctum']], function (){
     Route::post('/logout', [UserAPI::class, 'logout']);
+
+    Route::post('/upload', [Daseng::class, 'store']);
 });

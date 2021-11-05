@@ -18,9 +18,13 @@ class CreateDataSengketasTable extends Migration
             $table->string('no');
             $table->unsignedBigInteger('user_id');
             $table->string('file_penerima_kuasa_path');
+            $table->string('file_penerima_kuasa_name');
             $table->string('file_surat_kuasa_path');
+            $table->string('file_surat_kuasa_name');
             $table->string('file_form_pendaftaran_path');
+            $table->string('file_form_pendaftaran_name');
             $table->string('foto_lahan_path');
+            $table->string('foto_lahan_name');
             $table->string('keterangan');
             $table->integer('status');
             $table->timestamps();
